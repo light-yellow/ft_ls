@@ -31,3 +31,5 @@ struct dirent *readdir(DIR *dirp);
 To iterate through the entries in a directory, you need to call readdir, passing it a DIR * that was returned from opendir. This will return a dirent * from which you can read the name of the directory entry.
 
 The function will return NULL when all entries have been read.
+
+Объяви структуру со всеми нужными полями (имя файла, права и тд). При чтении каталога заполняй массив с этими структурами, увеличивая его размер при необходимости. Для сортировки используй qsort.
