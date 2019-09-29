@@ -14,6 +14,7 @@ struct dirent {
 
 
 Функция readdir() возвращает следующую структуру dirent считанную из файла-директории.
-***
 При достижении конца списка файлов в директории или возникновении ошибки возвращает NULL.
-`struct dirent *readdir(DIR *dirp);`
+```
+struct dirent *readdir(DIR *dirp);
+```
