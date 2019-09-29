@@ -14,6 +14,11 @@ struct dirent {
 ***
 Функция opendir() открывает поток каталога и возвращает указатель на структуру типа DIR, которая содержит информацию о каталоге.
 ```
+struct DIR {
+    struct dirent ent;
+    struct _WDIR *wdirp;
+};
+typedef struct DIR DIR;
 DIR *opendir(const char *name);
 ```
 ***
