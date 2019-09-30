@@ -1,0 +1,70 @@
+Tests préliminaires
+Vérifiez que les éléments suivants sont bien conformes au sujet :
+- il y a bien un rendu
+- rien d'autre dans le rendu que ce qui est demandé
+- le fichier auteur
+- la présence ou non du Makefile avec les règles demandées
+- s'il n'y a pas de Makefile, que le programme compile bien
+- la Norminette indique bien qu'il n'y a pas de problème de norme
+
+Si un élément n'est pas conforme au sujet, la notation s'arrête la. Vous pouvez toujours débattre du projet, mais le barème n'est pas applique.
+
+Yes No
+Tests
+
+Tests basiques
+Comme l'indique le sujet, un affichage identique est attendu, excepte la gestion des ACL et attributs étendus, et l'affichage en colonne (c'est pour les bonus ça).
+
+Effectuez les tests suivants :
+- ls
+- ls -a
+- ls -l
+- Vérifiez l'affichage correct des liens symboliques.
+
+A réaliser avec rien en paramètre, puis avec un fichier en paramètre, puis avec un répertoire.
+
+Yes No
+Tests basiques ++
+Effectuez les tests suivants :
+- ls -r
+- ls -t
+- tester sur les devices, les sockets (y en a generalement dans /var/run/) et pipe nommes (man mkfifo).
+- tester avec plusieurs fichiers/repertoires/... en parametre.
+- tester les setuid/setgid/stickybit
+
+Yes No
+Tests moins basiques
+Effectuez les tests suivants :
+- ls -R
+- gestion des options multiples: le parsing et les 2 formes ("-l -t" par ex. mais aussi "-lt")
+- gestion des options multiples : l'affichage correct.
+
+Yes No
+Gestion d'erreur
+- fichier/repertoire inexistant
+- fichier/repertoire inaccessible
+- option non geree ou inexistante
+
+Yes No
+Bonus
+
+Bonus ACL/Attributs
+Est-il présent ?
+
+Yes No
+Bonus gestion de l'affichage des colonnes
+Est-il présent ?
+
+Yes No
+Bonus rapidité
+A quel point estimez-vous la vitesse de ce ls proche de celui du système ? testez sur ls -lR / en chronométrant avec la commande time.
+- 0 : très lent
+- 5 : aussi rapide
+
+Rate it from 0 (failed) through 5 (excellent)
+Bonus options
+Évaluez la quantité d'options supplémentaires 100% fonctionnelles
+- 0 : y en a pas
+- 5 : y en a une tonne
+
+Rate it from 0 (failed) through 5 (excellent)
