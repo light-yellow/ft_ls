@@ -52,7 +52,9 @@ Algorithm: In program used two structures: the first stores input data from the 
 ```
 ***
 
-stat, lstat - функции, которые возвращают информацию о файле file_name и заполняют буфер buf. lstat идентична stat, но в случае символьных сылок она возвращает информацию о самой ссылке, а не о файле, на который она указывает. В случае успеха возвращается ноль. При ошибке возвращается -1
+# stat, lstat
+
+Функции, которые возвращают информацию о файле file_name и заполняют буфер buf. lstat идентична stat, но в случае символьных сылок она возвращает информацию о самой ссылке, а не о файле, на который она указывает. В случае успеха возвращается ноль. При ошибке возвращается -1
 ```
 int stat(const char *file_name, struct stat *buf);
 int lstat(const char *file_name, struct stat *buf);
@@ -165,3 +167,19 @@ getxattr получает значение value расширенного атр
 ssize_t getxattr (const char *path, const char *name, void *value, size_t size);
 ```
 
+# time, ctime
+
+Функция time возвращает время в секундах, прошедшее с начала этой эпохи (00:00:00 UTC, 1 Января 1970 года). Если t не равно нулю, то возвращаемое значение будет также сохранено в памяти структуры t.
+```
+time_t time(time_t *t);
+```
+Функция ctime преобразует дату и время в формат ASCII или в календарное представление.
+```
+char *ctime(const time_t *timep);
+```
+# readlink
+
+Функция readlink помещает содержимое символьной ссылки path в буфер buf длиной bufsiz . readlink не добавляет в buf символ NUL. Если файл, помещаемый в буфер, слишком мал, его длина bufsiz будет урезана.  
+```
+int readlink(const char *path, char *buf, size_t bufsiz);
+```
