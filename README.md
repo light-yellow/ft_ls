@@ -28,7 +28,7 @@ DIR *opendir(const char *name);
 struct dirent *readdir(DIR *dirp);
 ```
 
-# Вывести имена файлов в текущей папке:
+# Вывести имена файлов в текущей директории:
 ```
 #include <dirent.h> 
 #include <stdio.h> 
@@ -46,10 +46,6 @@ int main(void) {
   return(0);
 }
 ```
-
-To iterate through the entries in a directory, you need to call readdir, passing it a DIR * that was returned from opendir. This will return a dirent * from which you can read the name of the directory entry.
-
-The function will return NULL when all entries have been read.
 
 Объяви структуру со всеми нужными полями (имя файла, права и тд). При чтении каталога заполняй массив с этими структурами, увеличивая его размер при необходимости. Для сортировки используй qsort.
 
