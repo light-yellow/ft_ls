@@ -59,11 +59,11 @@ Algorithm: In program used two structures: the first stores input data from the 
 ```
 # Options
 ```
--a : List all entries including those starting with a dot.
--l : List in long format (ownership,user and groupe IDs, date/time, file size, name).
--R : Recursively list directories encountered.
--r : List in a reverse order.
--t : Sorted by time modified before sorting the operands by lexicographical order.
+-a : Включать в список файлы с именем, начинающимся с `.'.
+-l : Выдавать (в одноколоночном формате) тип файла, права доступа к файлу, количество ссылок на файл, имя владельца, имя группы, размер файла (в байтах), временной штамп и имя файла.
+-R : Включить рекурсивную выдачу списка каталогов.
+-r : Производить сортировку в обратном порядке.
+-t : Сортировать по показываемому временному штампу.
 ```
 ***
 
