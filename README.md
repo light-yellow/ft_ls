@@ -46,8 +46,8 @@ int main(void) {
   return(0);
 }
 ```
-
-Объяви структуру со всеми нужными полями (имя файла, права и тд). При чтении каталога заполняй массив с этими структурами, увеличивая его размер при необходимости. Для сортировки используй qsort.
+***
+Объяви структуру со всеми нужными полями (имя файла, права и тд). При чтении каталога заполняй массив (или дерево?) с этими структурами, увеличивая его размер при необходимости. Для сортировки используй qsort.
 
 ***
 Algorithm: In program used two structures: the first stores input data from the console and folders to bypass in the case of the -R flag. Sorting is implemented by the merge method. The second structure is used when opening a folder. A linked list of structures2 is created containing detailed information about the files depending on the flags. Further, the data from structure 2 are sent to the output. To speed up the program, all data from one folder is displayed in one write.
