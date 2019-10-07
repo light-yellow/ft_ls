@@ -28,6 +28,25 @@ DIR *opendir(const char *name);
 struct dirent *readdir(DIR *dirp);
 ```
 
+# Вывести имена файлов в текущей папке:
+```
+#include <dirent.h> 
+#include <stdio.h> 
+
+int main(void) {
+  DIR *d;
+  struct dirent *dir;
+  d = opendir(".");
+  if (d) {
+    while ((dir = readdir(d)) != NULL) {
+      printf("%s\n", dir->d_name);
+    }
+    closedir(d);
+  }
+  return(0);
+}
+```
+
 To iterate through the entries in a directory, you need to call readdir, passing it a DIR * that was returned from opendir. This will return a dirent * from which you can read the name of the directory entry.
 
 The function will return NULL when all entries have been read.
