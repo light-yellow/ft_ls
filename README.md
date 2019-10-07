@@ -37,3 +37,23 @@ The function will return NULL when all entries have been read.
 ***
 Algorithm: In program used two structures: the first stores input data from the console and folders to bypass in the case of the -R flag. Sorting is implemented by the merge method. The second structure is used when opening a folder. A linked list of structures2 is created containing detailed information about the files depending on the flags. Further, the data from structure 2 are sent to the output. To speed up the program, all data from one folder is displayed in one write.
 ***
+
+# Usage
+```
+./ft_ls [-AadfGlorRStT] [arg] ...
+```
+# Options
+```
+-A : List all entries including those starting with a dot except . and ..
+-a : List all entries including those starting with a dot.
+-d : Directories are listed as plain files (not searched recursively)
+-f : Output is not sorted.
+-G : Enable colors.
+-l : List in long format (ownership,user and groupe IDs, date/time, file size, name).
+-o : List in long format, but omits group ID.
+-R : Recursively list directories encountered.
+-r : List in a reverse order.
+-S : Sort files by size.
+-T : When used with -l option, display complete time information of the file (from year to minute).
+-t : Sorted by time modified before sorting the operands by lexicographical order.
+```
