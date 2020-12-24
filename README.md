@@ -225,8 +225,8 @@ int ioctl(int fd, int cmd, struct winsize *argp);
 ```
 struct winsize {
         unsigned short ws_row;
-        unsigned short ws_col;
-        unsigned short ws_xpixel;   /* unused */
-        unsigned short ws_ypixel;   /* unused */
+        unsigned short ws_col;      /* Нам нужно только это значение */
+        unsigned short ws_xpixel;
+        unsigned short ws_ypixel;
 };
 ```
