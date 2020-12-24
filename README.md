@@ -212,3 +212,21 @@ char *strerror(int errnum);
 ```
 void perror(const char *s);
 ```
+
+# Определение размера окна:
+Для определения размера окна используется функция ```ioctl()``` и константа ```TIOCGWINSZ```.
+
+```
+#include <sys/ioctl.h>
+int ioctl(int fd, int cmd, struct winsize *argp);
+```
+
+Структура используемая этим системным вызовом ioctl, определяется так:
+```
+struct winsize {
+        unsigned short ws_row;
+        unsigned short ws_col;
+        unsigned short ws_xpixel;   /* unused */
+        unsigned short ws_ypixel;   /* unused */
+};
+```
